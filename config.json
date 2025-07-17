@@ -111,6 +111,30 @@
         "VEWD"
       ],
       "default": "0x333333333311"
+    },
+    {
+      "name": "RestManager",
+      "positions": [
+        "BASICLIB",
+        "EVENTS",
+        "ROUTES",
+        "ADV_PL",
+        "AVIO_PL",
+        "BLUETOOTH_PL",
+        "CAS_PL",
+        "EPG_PL",
+        "INPUT_PL",
+        "MULTIROOM_PL",
+        "NETWORK_PL",
+        "INBOX_PL",
+        "PLAYER_PL",
+        "PVR_PL",
+        "SYSTEM_PL",
+        "APP_PL",
+        "USERDATA_PL",
+        "VOICE_PL"
+      ],
+      "default": ""
     }
   ]
 }
