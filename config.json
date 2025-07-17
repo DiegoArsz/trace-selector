@@ -1,0 +1,116 @@
+{
+  "traceLevels": {
+    "0": "Desactivado",
+    "1": "Error",
+    "3": "Warning",
+    "7": "Info",
+    "F": "Debug"
+  },
+  "modules": [
+    {
+      "name": "DatahubManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "POSTMANAGER",
+        "SERVER",
+        "FULLMSG",
+        "MONITORING",
+        "POST_EXTRA",
+        "DNSMASQ_MONITOR"
+      ],
+      "default": "0x30303311"
+    },
+    {
+      "name": "ConfigManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "CONFIG MANAGER",
+        "DISK STORE",
+        "CMD",
+        "EVT",
+        "FUSE",
+        "OPCH",
+        "MAIN",
+        "OTT",
+        "OTTFUL",
+        "OPCH LIBNOKIA",
+        "BOOTLOADERAPI"
+      ],
+      "default": "0x0333333333311"
+    },
+    {
+      "name": "NetworkManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "NETWORK",
+        "IFACE",
+        "SYSTEM",
+        "DHCP CLIENT",
+        "PING",
+        "NETLINK",
+        "DNS",
+        "WIFILIB",
+        "WIFI API",
+        "WIFI EVENTS",
+        "WIFI LED"
+      ],
+      "default": "0x3333333333311"
+    },
+    {
+      "name": "DeviceManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "AVIO",
+        "CEC",
+        "DVCM"
+      ],
+      "default": "0x33311"
+    },
+    {
+      "name": "EpgManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "EPGM",
+        "DVBIPIC",
+        "CONTENTAPI",
+        "DVBIPINOKIA"
+      ],
+      "default": "0x333311"
+    },
+    {
+      "name": "PackageDownloader",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "DOWNLOADER",
+        "MONITORING",
+        "PACKAGER_SERVER",
+        "PACKAGER_CLIENT"
+      ],
+      "default": "0x333311"
+    },
+    {
+      "name": "ThirdPartyManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "3RDMANAGER",
+        "GENERIC PLUGIN",
+        "3RDMAIN",
+        "NETFLIX",
+        "AMAZON",
+        "YOUTUBE",
+        "BROWSER",
+        "DISNEY",
+        "WEBDRIVER",
+        "VEWD"
+      ],
+      "default": "0x333333333311"
+    }
+  ]
+}

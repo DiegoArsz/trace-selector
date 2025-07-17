@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trace Selector</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Modules</h2>
+
+      <div class="search-container">
+        <input type="text" placeholder="Search module" id="module-search" autocomplete="off">
+      </div>
+      <ul id="module-list">
+      </ul>
+      <div class="command-container">
+        <h3>Generated command</h3>
+        <pre><code id="command">TlfSetVariable ...</code></pre>
+        <button id="copy-button">Copy command</button>
+      </div>
+    </aside>
+    <div class="main-container">
+      <main>
+        <h1>Trace command generator</h1>
+        <h2 id="module-name"></h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th>Error</th>
+              <th>Warning</th>
+              <th>Info</th>
+              <th>Debug</th>
+              <th>Disabled</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </main>
+    </div>
+  </div>
+
+  <template id="row-template">
+    <tr>
+      <td class="position-name"></td>
+      <td><label><input type="radio" name="" value="1"></label></td>
+      <td><label><input type="radio" name="" value="3"></label></td>
+      <td><label><input type="radio" name="" value="7"></label></td>
+      <td><label><input type="radio" name="" value="F"></label></td>
+      <td><label><input type="radio" name="" value="0"></label></td>
+    </tr>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
