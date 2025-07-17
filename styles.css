@@ -55,6 +55,7 @@ body {
   overflow-x: hidden;
   padding-right: 8px;
   max-height: calc(100vh - 200px);
+  margin-bottom: 225px;
 }
 
 #module-list li {
