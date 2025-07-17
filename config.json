@@ -134,7 +134,151 @@
         "USERDATA_PL",
         "VOICE_PL"
       ],
-      "default": ""
-    }
+      "default": "0x3033333333333311"
+    },
+    {
+      "name": "TomiPlayer",
+      "positions": [
+        "BASICLIB",
+        "XDR COMM/BUFFERS",
+        "HALCOMMON/COMMON/CLOCKS",
+        "HALCODECS",
+        "HALDEMUX/SEC",
+        "VIDEO/AUDIO",
+        "DEMUX/TABLE PSI",
+        "SOURCE/CONECTOR",
+        "RESOURCES/MNGR/FRW/MAIN",
+        "SECURITY/DRM",
+        "SUBTITLES/NOTIFIER",
+        "SCTE35/ADVERTISMENT",
+        "VSA IP/RTSP",
+        "HLS/DASH/HTTP",
+        "FILE/HDD/MROOM",
+        "RECORDER/INDEXING"
+      ],
+      "default": "0x337333F777333311"
+    },
+    {
+      "name": "KeyManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "KEY INPUT",
+        "KEY DRIVER",
+        "KEY GRABBER",
+        "KEY MANAGER",
+        "KEY CLIENTS",
+        "KEY MISCELLANEOUS",
+        "KEY LEDS",
+        "KEY PIOS"
+      ],
+      "default": "0x33333311"
+    },
+    {
+      "name": "SystemManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "APP MANAGER",
+        "APP MANANGER PARSER",
+        "APP MANAGER LEVEL",
+        "TLFLOG_APPMANDBUS",
+        "SYSTEM LEDS",
+        "TIME MANAGER",
+        "SYSTEM MONITOR",
+        "SYSTEM STANDBY",
+        "SYSTEM MAIN"
+      ],
+      "default": "0x3333333333311"
+    },
+    {
+      "name": "NotificationManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "INFOPUSH",
+        "SPRAYER",
+        "MAIN",
+        "CONFIGURATION",
+        "LOW LEVEL COMMANDS",
+        "EVENT DISPATCHER",
+        "XML PARSER",
+        "INBOX",
+        "CONNECTION CLIENT",
+        "SYSSTATUS BASE",
+        "SYSSTATUS",
+        "AURA",
+        "DATAHUB"
+      ],
+      "default": "0x3333333333333311"
+    },
+    {
+      "name": "MultiroomManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",,
+        "APILIB",
+        "MULTIROOM",
+      ],
+      "default": "0x3311"
+    },
+    {
+      "name": "Dial",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "MAIN",
+        "DISCOVER",
+        "HTTP",
+        "NETFLIX",
+        "AMAZON",
+        "YOUTUBE",
+        "GRAPHENE"
+      ],
+      "default": "0x333333311"
+    },
+    {
+      "name": "BluetoothController",
+      "positions": [
+        "Common Libs",
+        "XDR",
+        "BT Manager",
+        "BT FW Update",
+        "BT CMD",
+        "BT DBUS/BLUEZ"
+      ],
+      "default": "0x33311"
+    },
+    {
+      "name": "VoiceManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "VOICEMAIN",
+        "GRPC"
+      ],
+      "default": "0x333311"
+    },
+        {
+      "name": "TomiPlayerDash",
+      "positions": [
+        "Parse Mpd",
+        "Segments URLs",
+        "Box Settings",
+        "Live Manifest",
+        "State Machine CMD",
+        "State Machine",
+        "Chunk Manager",
+        "Index Range",
+        "Representation Manager",
+        "Segment Manager",
+        "Segment Handler",
+        "Trick Mode",
+        "Writter",
+        "BW selector",
+        "Adaptation Manager",
+        "DASH stats"
+      ],
+      "default": "0x337337337777773F"
   ]
 }
