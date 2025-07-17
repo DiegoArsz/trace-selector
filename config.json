@@ -216,9 +216,9 @@
       "name": "MultiroomManager",
       "positions": [
         "BASICLIB",
-        "XDR",,
+        "XDR",
         "APILIB",
-        "MULTIROOM",
+        "MULTIROOM"
       ],
       "default": "0x3311"
     },
@@ -280,5 +280,6 @@
         "DASH stats"
       ],
       "default": "0x337337337777773F"
+    }
   ]
 }
