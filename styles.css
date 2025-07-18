@@ -68,7 +68,6 @@ body {
   border: 2px solid transparent;
   font-weight: 500;
   text-align: center;
-  backdrop-filter: blur(10px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -101,7 +100,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1000;
 }
@@ -185,7 +183,6 @@ table {
   box-shadow: 0 8px 32px rgba(0,182,241,0.10), 0 1.5px 8px rgba(0,0,0,0.04);
   margin: 32px auto;
   font-family: 'Segoe UI', Arial, sans-serif;
-  backdrop-filter: blur(6px);
   table-layout: fixed;
 }
 
@@ -202,7 +199,6 @@ thead th {
   position: sticky;
   top: -48px;
   z-index: 10;
-  backdrop-filter: blur(15px);
   box-shadow: 0 2px 8px rgba(2, 102, 255, 0.15);
 }
 
@@ -215,7 +211,6 @@ thead th::before {
   bottom: 0;
   background: inherit;
   z-index: -1;
-  backdrop-filter: blur(20px);
 }
 
 thead th:nth-child(1) { width: 40%; }
@@ -233,7 +228,6 @@ td {
   padding: 14px 10px;
   border-bottom: 1.5px solid #e0f7ff;
   font-size: 1.01rem;
-  backdrop-filter: blur(2px);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -345,7 +339,6 @@ tbody tr {
   font-weight: 500;
   font-family: 'Segoe UI', Arial, sans-serif;
   transition: all 0.3s ease;
-  backdrop-filter: blur(15px);
   box-sizing: border-box;
   text-align: left;
   letter-spacing: 0.3px;
