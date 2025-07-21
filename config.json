@@ -280,6 +280,16 @@
         "DASH stats"
       ],
       "default": "0x337337337777773F"
+    },
+    {
+      "name": "App BoB",
+      "positions": ["All"],
+      "default": "0x1"
+    },
+    {
+      "name": "App Latam",
+      "positions": ["All"],
+      "default": "0x1"
     }
   ]
 }

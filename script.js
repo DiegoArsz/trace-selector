@@ -105,11 +105,37 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const updateCommand = (module) => {
+
     let hexValue = ""
     for (let i = module.positions.length - 1; i >= 0; i--) {
       const checked = document.querySelector(`input[name="traceLevel-${i}"]:checked`)
       hexValue += checked ? checked.value.toUpperCase() : "0"
     }
+
+    if (module.name === "App BoB") {
+      if (hexValue === "0") {
+        commandBox.textContent = `TlfSetVariable Debug/DebugVannevarBrowser -r
+TlfSetVariable Debug/debugEnabled -r
+TlfSetVariable Debug/debugLevel -r`
+      } else {
+        commandBox.textContent = `TlfSetVariable Debug/DebugVannevarBrowser true
+TlfSetVariable Debug/debugEnabled true
+TlfSetVariable Debug/debugLevel debug,info,warn,error,table,log`
+      }
+      return
+    }
+
+    if (module.name === "App Latam") {
+      if (hexValue === "0") {
+        commandBox.textContent = `TlfSetVariable Debug/DebugVannevarBrowser -r
+TlfSetVariable Debug/DebugStvIptv -r`
+      } else {
+        commandBox.textContent = `TlfSetVariable Debug/DebugVannevarBrowser true
+TlfSetVariable Debug/DebugStvIptv 0xff`
+      }
+      return
+    }
+
     commandBox.textContent = `TlfSetVariable Debug/Debug${module.name} 0x${hexValue}`
   }
 
