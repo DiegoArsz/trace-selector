@@ -290,6 +290,17 @@
       "name": "App Latam",
       "positions": ["All"],
       "default": "0x1"
+    },
+    {
+      "name": "UserDataManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "User Data Manager",
+        "User Data Info",
+        "User Data Rest"
+      ],
+      "default": "0x33311"
     }
   ]
 }
