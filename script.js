@@ -8,6 +8,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const commandBox = document.getElementById("command")
   const copyButton = document.getElementById("copy-button")
   const moduleList = document.getElementById("module-list")
+  const themeToggle = document.getElementById("theme-toggle")
+  const themeIcon = document.querySelector(".theme-icon")
+
+  // Theme toggle functionality
+  const initTheme = () => {
+    const savedTheme = localStorage.getItem('theme') || 'light'
+    document.documentElement.setAttribute('data-theme', savedTheme)
+    updateThemeIcon(savedTheme)
+  }
+
+  const updateThemeIcon = (theme) => {
+    themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙'
+  }
+
+  const toggleTheme = () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
+    
+    document.documentElement.setAttribute('data-theme', newTheme)
+    localStorage.setItem('theme', newTheme)
+    updateThemeIcon(newTheme)
+  }
+
+  themeToggle.addEventListener("click", toggleTheme)
+  initTheme()
 
   copyButton.addEventListener("click", () => {
     navigator.clipboard.writeText(commandBox.textContent)
