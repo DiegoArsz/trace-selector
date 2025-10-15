@@ -259,8 +259,8 @@
       ],
       "default": "0x333311"
     },
-        {
-      "name": "TomiPlayerDash",
+    {
+      "name": "TomiDash",
       "positions": [
         "Parse Mpd",
         "Segments URLs",
@@ -280,6 +280,20 @@
         "DASH stats"
       ],
       "default": "0x337337337777773F"
+    },
+    {
+      "name": "AdvManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "CLIENT",
+        "MAIN",
+        "CONFIG",
+        "REST",
+        "MONITORING",
+        "XML PARSER"
+      ],
+      "default": "0x33333311"
     },
     {
       "name": "App BoB",
