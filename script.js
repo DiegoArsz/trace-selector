@@ -41,6 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const renderModuleList = () => {
     moduleList.innerHTML = ""
+    config.modules.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1
+      }
+      if (a.name > b.name) {
+        return 1
+      }
+      return 0
+    })
     config.modules.forEach((module, index) => {
       const li = document.createElement("li")
       li.textContent = module.name
