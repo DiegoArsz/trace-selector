@@ -118,6 +118,7 @@ body {
   color: var(--text-white);
   letter-spacing: 0.5px;
   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-grow: 1;
 }
 
 #theme-toggle {
@@ -335,7 +336,7 @@ thead th {
 }
 
 [data-theme="dark"] thead th {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0);
 }
 
 thead th::before {
