@@ -315,6 +315,47 @@
         "User Data Rest"
       ],
       "default": "0x33311"
+    },
+    {
+      "name": "Ocdm",
+      "positions": [
+        "OCDM_LOG",
+        "OCDM_MGR",
+        "OCDM_IFACE",
+        "OCDM_IMPL",
+        "OCDM_CENC_PARSER",
+        "OCDM",
+        "OCDM_EXT",
+        "OCDM_ADAPTER"
+      ],
+      "default": "0x33333311"
+    },
+    {
+      "name": "OcdmClearKey",
+      "positions": [
+        "CK_SYSTEM",
+        "CK_SESSION",
+        "CK_JSON"
+      ],
+      "default": "0x311"
+    },
+    {
+      "name": "OcdmWidevine",
+      "positions": [
+        "WV_SYSTEM",
+        "WV_SESSION",
+        "WV_JSON"
+      ],
+      "default": "0x311"
+    },
+    {
+      "name": "OcdmPlayready",
+      "positions": [
+        "PR_SYSTEM",
+        "PR_SESSION",
+        "PR_JSON"
+      ],
+      "default": "0x311"
     }
   ]
 }
