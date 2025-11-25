@@ -117,6 +117,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const defaultValues = parseDefaultString(module.default, module.positions.length)
 
     module.positions.forEach((position, idx) => {
+      if (position === "N/A") {
+        return
+      }
+
       const clone = rowTemplate.content.cloneNode(true)
       const tdName = clone.querySelector(".position-name")
       tdName.textContent = position

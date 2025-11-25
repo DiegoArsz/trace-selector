@@ -184,12 +184,14 @@
         "APP MANAGER LEVEL",
         "TLFLOG_APPMANDBUS",
         "SYSTEM LEDS",
+        "N/A",
+        "N/A",
         "TIME MANAGER",
         "SYSTEM MONITOR",
         "SYSTEM STANDBY",
         "SYSTEM MAIN"
       ],
-      "default": "0x3333333333311"
+      "default": "0x3333003333311"
     },
     {
       "name": "NotificationManager",
