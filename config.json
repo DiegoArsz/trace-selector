@@ -129,12 +129,13 @@
         "INBOX_PL",
         "PLAYER_PL",
         "PVR_PL",
+        "SERVICE_PL",
         "SYSTEM_PL",
         "APP_PL",
         "USERDATA_PL",
         "VOICE_PL"
       ],
-      "default": "0x3033333333333311"
+      "default": "0x30333333333333311"
     },
     {
       "name": "TomiPlayer",
@@ -358,6 +359,17 @@
         "PR_JSON"
       ],
       "default": "0x311"
+    },
+    {
+      "name": "TrClientManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "TRCLIENT",
+        "STUN",
+        "FULLTR"
+      ],
+      "default": "0x03300"
     }
   ]
 }
