@@ -19,6 +19,12 @@
       <div class="search-container">
         <input type="text" placeholder="Search module" id="module-search" autocomplete="off">
       </div>
+      <details class="import-container">
+        <summary>Importar nivel de traza actual</summary>
+        <textarea id="import-input" rows="3" placeholder="Pega aquí el comando completo: TlfGetVariable Debug/Debug... 0x..."></textarea>
+        <button id="import-button">Aplicar</button>
+        <p id="import-feedback"></p>
+      </details>
       <ul id="module-list">
       </ul>
       <div class="command-container">

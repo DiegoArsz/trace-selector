@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const moduleList = document.getElementById("module-list")
   const themeToggle = document.getElementById("theme-toggle")
   const themeIcon = document.querySelector(".theme-icon")
+  const importInput = document.getElementById("import-input")
+  const importButton = document.getElementById("import-button")
+  const importFeedback = document.getElementById("import-feedback")
 
   // Theme toggle functionality
   const initTheme = () => {
@@ -103,18 +106,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
-  const updateModule = (pos) => {
+  const updateModule = (pos, hexOverride) => {
     currentModuleIndex = pos
     h2ModuleName.textContent = config.modules[pos].name
-    renderLevels(config.modules[pos])
+    renderLevels(config.modules[pos], hexOverride)
     updateCommand(config.modules[pos])
   }
 
-  const renderLevels = (module) => {
+  const renderLevels = (module, hexOverride) => {
     table.innerHTML = ""
     const fragment = document.createDocumentFragment()
 
-    const defaultValues = parseDefaultString(module.default, module.positions.length)
+    const defaultValues = parseDefaultString(hexOverride || module.default, module.positions.length)
 
     module.positions.forEach((position, idx) => {
       if (position === "N/A") {
@@ -176,6 +179,68 @@ TlfSetVariable Debug/DebugStvIptv 0xff`
 
     commandBox.textContent = `TlfSetVariable Debug/Debug${module.name} 0x${hexValue}`
   }
+
+  const parseImportedTrace = (text) => {
+    if (/DebugStvIptv/i.test(text)) {
+      const enabled = /DebugStvIptv\s+0x/i.test(text)
+      return { moduleName: "App Latam", hex: enabled ? "1" : "0" }
+    }
+
+    if (/debugEnabled/i.test(text)) {
+      const enabled = /debugEnabled\s+true/i.test(text)
+      return { moduleName: "App BoB", hex: enabled ? "1" : "0" }
+    }
+
+    const match = text.match(/Debug\/Debug([A-Za-z0-9]+)\s+0x([0-9A-Fa-f]+)/)
+    if (match) {
+      return { moduleName: match[1], hex: match[2] }
+    }
+
+    return null
+  }
+
+  const selectModuleInSidebar = (index) => {
+    moduleList.querySelectorAll("li").forEach(item => item.classList.remove("selected"))
+    const li = moduleList.children[index]
+    if (li) {
+      li.classList.add("selected")
+      li.scrollIntoView({ block: "nearest" })
+    }
+  }
+
+  const setImportFeedback = (message, isError) => {
+    importFeedback.textContent = message
+    importFeedback.classList.toggle("error", !!isError)
+    importFeedback.classList.toggle("success", !isError)
+  }
+
+  const applyImport = () => {
+    const text = importInput.value.trim()
+    importFeedback.textContent = ""
+    importFeedback.classList.remove("error", "success")
+
+    if (!text) {
+      return
+    }
+
+    const parsed = parseImportedTrace(text)
+    if (!parsed) {
+      setImportFeedback("No se ha reconocido ningún módulo en el texto.", true)
+      return
+    }
+
+    const index = config.modules.findIndex(m => m.name === parsed.moduleName)
+    if (index === -1) {
+      setImportFeedback(`Módulo "${parsed.moduleName}" no encontrado.`, true)
+      return
+    }
+
+    selectModuleInSidebar(index)
+    updateModule(index, parsed.hex)
+    setImportFeedback(`Módulo "${config.modules[index].name}" cargado.`, false)
+  }
+
+  importButton.addEventListener("click", applyImport)
 
   const parseDefaultString = (defaultString, posCount) => {
     if (!defaultString) {
