@@ -370,6 +370,25 @@
         "FULLTR"
       ],
       "default": "0x03300"
+    },
+    {
+      "name": "RpmUpdater",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "LIBRPMUPDATER",
+        "RPMUPDATER"
+      ],
+      "default": "0x3311"
+    },
+    {
+      "name": "MabrManager",
+      "positions": [
+        "BASICLIB",
+        "XDR",
+        "MABRMANAGER"
+      ],
+      "default": "0x311"
     }
   ]
 }
